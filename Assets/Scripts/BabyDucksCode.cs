@@ -34,6 +34,24 @@ public class BabyDucksCode : MonoBehaviour
         duckCount = 0;
     }
 
+        public void SetDuckColor(Color color)
+    {
+        if (babyDuckPrefab != null)
+        {
+            var r = babyDuckPrefab.GetComponent<SpriteRenderer>();
+            if (r != null)
+                r.color = color;
+        }
+
+        foreach (Transform duck in babyDucks)
+        {
+            var r = duck.GetComponent<SpriteRenderer>();
+            if (r != null)
+                r.color = color;
+        }
+    }
+
+
     void Update()
     {
         FollowChain();
@@ -52,5 +70,17 @@ public class BabyDucksCode : MonoBehaviour
             duck.position = Vector3.Lerp(duck.position, desiredPos, followSpeed * Time.deltaTime); //to make the process smoother
             duck.up = Vector3.Lerp(duck.up, target.up, followSpeed * Time.deltaTime);
         }
+    }
+
+    public void removeDuck(Transform duckTransform)
+    {
+        if (babyDucks.Contains(duckTransform))
+        {
+            babyDucks.Remove(duckTransform);
+            duckCount--;
+        }
+
+        if (duckTransform != null)
+            Destroy(duckTransform.gameObject);
     }
 }

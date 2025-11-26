@@ -583,6 +583,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 100
   babyDucks: {fileID: 1161824711}
+  currentLevel: 0
+  winSceneName: WinScene
+  level0Color: {r: 0.5377358, g: 0.5377358, b: 0.5377358, a: 1}
+  level1Color: {r: 1, g: 0.6, b: 0.8, a: 1}
+  level2Color: {r: 0.1484959, g: 0.4978803, b: 0.6698113, a: 1}
+  level3Color: {r: 0.4811321, g: 0.13843894, b: 0.18053582, a: 1}
+  level4Color: {r: 0.12041651, g: 0.6226415, b: 0.15202194, a: 1}
 --- !u!114 &118699359
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -680,6 +687,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firePoint: {fileID: 496729512}
   bulletPrefab: {fileID: 3456090731240480874, guid: 43446ff0bba9b9c468c7a8fc08e8f71a, type: 3}
+  cooldown: 0
 --- !u!1 &133488359
 GameObject:
   m_ObjectHideFlags: 0

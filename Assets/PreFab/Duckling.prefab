@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2878360846548366399}
   m_Layer: 0
   m_Name: Duckling
-  m_TagString: Untagged
+  m_TagString: BabyDuck
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

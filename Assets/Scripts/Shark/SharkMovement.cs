@@ -1,4 +1,7 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
+
 
 public class SharkMovement : MonoBehaviour
 {
@@ -7,6 +10,7 @@ public class SharkMovement : MonoBehaviour
     private Rigidbody2D rd;
     private PlayerAwarenessController _playerAwarenessController;
     private Vector2 _targetDirection;
+    public static float speedMultiplier = 1f;
     
     private void Awake()
     {
@@ -53,7 +57,26 @@ public class SharkMovement : MonoBehaviour
         }
         else
         {
-            rd.linearVelocity = -transform.right * _speed;
+            rd.linearVelocity = -transform.right * (_speed * speedMultiplier);
+        }
+    }
+
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            SceneManager.LoadScene("GameOver");
+        }
+        else if (other.CompareTag("BabyDuck"))
+        {
+            BabyDucksCode babyManager = FindFirstObjectByType<BabyDucksCode>();
+            if (babyManager != null)
+                babyManager.removeDuck(other.transform);
+
+            MotherDuckCode mother = FindFirstObjectByType<MotherDuckCode>();
+            if (mother != null)
+                mother.DucklingEaten();
         }
     }
 
