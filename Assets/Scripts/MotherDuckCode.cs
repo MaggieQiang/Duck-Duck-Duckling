@@ -38,6 +38,9 @@ public class MotherDuckCode : MonoBehaviour
         shooting = GetComponent<Shooting>();
 
         ApplyLevelVisuals();
+
+        if (FishCount.Instance != null)
+        FishCount.Instance.UpdateFishCount(fishScore);
     }
 
     public void OnMove(InputValue value)
@@ -66,6 +69,9 @@ public class MotherDuckCode : MonoBehaviour
     {
         fishScore += value;
         Debug.Log("fish eaten: " + fishScore);
+
+        if (FishCount.Instance != null)
+        FishCount.Instance.UpdateFishCount(fishScore);
 
         if (fishScore % fishPerDuckling == 0)
         {
@@ -98,6 +104,9 @@ public class MotherDuckCode : MonoBehaviour
             fishScore = 0;
 
         Debug.Log("Duckling eaten. Fish score: " + fishScore);
+
+        if (FishCount.Instance != null)
+        FishCount.Instance.UpdateFishCount(fishScore);
     }
 
     private void LevelUp()
