@@ -15,6 +15,8 @@ public class Shark : MonoBehaviour
     }
     public void Die()
     {
+        if (Audio.Instance != null)
+        Audio.Instance.KillSound();
         Destroy(gameObject);
     }
 

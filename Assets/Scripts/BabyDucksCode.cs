@@ -18,6 +18,9 @@ public class BabyDucksCode : MonoBehaviour
         duckCount++;
         Debug.Log("Baby duck added! Total: " + duckCount);
 
+        if (Audio.Instance != null)
+        Audio.Instance.YieldSound();
+
         GameObject newDuck = Instantiate(babyDuckPrefab);
         Transform duckTransform = newDuck.transform;
 

@@ -44,6 +44,8 @@ public class FishCode : MonoBehaviour
                 player.IncreaseScore(1);
             if (fish_spawner != null)
                 fish_spawner.fish_count -= 1; //reduce fish count to have live count of fish
+            if (Audio.Instance != null)
+            Audio.Instance.SlurpSound();
             Destroy(gameObject);
         }
     }

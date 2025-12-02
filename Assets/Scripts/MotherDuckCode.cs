@@ -105,6 +105,9 @@ public class MotherDuckCode : MonoBehaviour
         currentLevel++;
         Debug.Log("Level up! New level: " + currentLevel);
 
+        if (Audio.Instance != null)
+        Audio.Instance.LevelUpSound(currentLevel);
+
         if (babyDucks != null)
             babyDucks.removeAllDucks();
 
@@ -124,6 +127,8 @@ public class MotherDuckCode : MonoBehaviour
     private void WinGame()
     {
         Debug.Log("YOU WIN! Reached level 4 + 20 more fish.");
+        if (Audio.Instance != null)
+        Audio.Instance.WinSound();
 
         if (!string.IsNullOrEmpty(winSceneName))
         {

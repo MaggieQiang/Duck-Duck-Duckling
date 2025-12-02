@@ -9,7 +9,15 @@ public class Audio : MonoBehaviour
     [SerializeField] private AudioMixer audioMixer;
     public AudioClip background;
     public AudioClip shooting;
-    public AudioClip drowning;
+    public AudioClip yielding;
+    public AudioClip death;
+    public AudioClip level1;
+    public AudioClip level2;
+    public AudioClip level3;
+    public AudioClip kill;
+    public AudioClip slurp;
+    public AudioClip lose;
+    public AudioClip win;
     [SerializeField] private string parameterName = "BGMVolume";
 
     public void SetVolume(float value)
@@ -46,12 +54,67 @@ public class Audio : MonoBehaviour
         }
     }
 
-
-    public void DrownSound()
+    public void YieldSound()
     {
-        if (sfxSource != null && drowning != null)
+        if (sfxSource != null && yielding != null)
         {
-            sfxSource.PlayOneShot(drowning);
+            sfxSource.PlayOneShot(yielding);
+        }
+    }
+    
+    public void DeathSound()
+    {
+        if (sfxSource != null && death != null)
+        {
+            sfxSource.PlayOneShot(death);
+        }
+    }
+
+    public void LevelUpSound(int level)
+    {
+        AudioClip clip = null;
+        
+        switch (level)
+        {
+            case 1: clip = level1; break;
+            case 2: clip = level2; break;
+            case 3: clip = level3; break;
+        }
+        
+        if (sfxSource != null && clip != null)
+        {
+            sfxSource.PlayOneShot(clip);
+        }
+    }
+    
+    public void KillSound()
+    {
+        if (sfxSource != null && kill != null)
+        {
+            sfxSource.PlayOneShot(kill);
+        }
+    }
+
+    public void SlurpSound()
+    {
+        if (sfxSource != null && slurp != null)
+        {
+            sfxSource.PlayOneShot(slurp);
+        }
+    }
+
+    public void WinSound()
+    {
+        if (sfxSource != null && win != null)
+        {
+            sfxSource.PlayOneShot(win);
+        }
+    }
+    public void GameOverSound()
+    {
+        if (sfxSource != null && lose != null)
+        {
+            sfxSource.PlayOneShot(lose);
         }
     }
 

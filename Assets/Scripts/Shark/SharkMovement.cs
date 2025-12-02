@@ -66,10 +66,16 @@ public class SharkMovement : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            if (Audio.Instance != null)
+            Audio.Instance.GameOverSound();
+
             SceneManager.LoadScene("GameOver");
         }
         else if (other.CompareTag("BabyDuck"))
         {
+            if (Audio.Instance != null)
+            Audio.Instance.DeathSound();
+
             BabyDucksCode babyManager = FindFirstObjectByType<BabyDucksCode>();
             if (babyManager != null)
                 babyManager.removeDuck(other.transform);

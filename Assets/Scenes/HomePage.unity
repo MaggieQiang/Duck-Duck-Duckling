@@ -299,6 +299,7 @@ GameObject:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
   - component: {fileID: 519420030}
+  - component: {fileID: 519420033}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -416,6 +417,14 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!81 &519420033
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -638,7 +647,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 905786312}
-  - component: {fileID: 905786311}
   - component: {fileID: 905786310}
   m_Layer: 0
   m_Name: AudioManager
@@ -664,16 +672,16 @@ MonoBehaviour:
   audioMixer: {fileID: 24100000, guid: 5a74fb86b1cca4d4cb593b444b45ae87, type: 2}
   background: {fileID: 8300000, guid: 4a7ca58d1354744acb08eb960b74007d, type: 3}
   shooting: {fileID: 8300000, guid: 7561e1bc428124c9390f4557c56355ee, type: 3}
-  drowning: {fileID: 8300000, guid: ea5a4f62b922e42ee8c9edacf588f610, type: 3}
+  yielding: {fileID: 8300000, guid: c1ad78a104ac8439eae903b159edfeb2, type: 3}
+  death: {fileID: 8300000, guid: 68e58eb8dea1e4198869f5f3f53aa317, type: 3}
+  level1: {fileID: 8300000, guid: 82af1200f2868411a88993c39fe16e7a, type: 3}
+  level2: {fileID: 8300000, guid: 822d72afb6e104a62a89aa6aafea2866, type: 3}
+  level3: {fileID: 8300000, guid: bb2a1c639c62045d38d5e58421cd3f80, type: 3}
+  kill: {fileID: 8300000, guid: 538fa0a31c8b14d1a8f00cf80c17e5df, type: 3}
+  slurp: {fileID: 8300000, guid: 5a7af75d2b55e4fab8ccbdc84d8f4a8b, type: 3}
+  lose: {fileID: 8300000, guid: 1416ee4232bfa44e095e73366a804a96, type: 3}
+  win: {fileID: 8300000, guid: 2ea50291cb2724252bb52dad03947591, type: 3}
   parameterName: BGMVolume
---- !u!81 &905786311
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 905786309}
-  m_Enabled: 1
 --- !u!4 &905786312
 Transform:
   m_ObjectHideFlags: 0
