@@ -141,7 +141,7 @@ public class MotherDuckCode : MonoBehaviour
 
         if (!string.IsNullOrEmpty(winSceneName))
         {
-            SceneManager.LoadScene(winSceneName);
+            SceneManager.LoadScene("WinScene");
         }
     }
 
