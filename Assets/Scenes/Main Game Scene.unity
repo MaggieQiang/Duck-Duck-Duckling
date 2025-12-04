@@ -1007,7 +1007,7 @@ MonoBehaviour:
   game_area: {fileID: 1100860555}
   fish_prefab: {fileID: 5026209185636154131, guid: a24f6b8d45770488798bd6ad924363aa, type: 3}
   fish_count: 0
-  fish_limit: 20
+  fish_limit: 25
   fish_per_frame: 1
   spawn_circle_radius: 1000
   death_circle_radius: 1100
@@ -1366,7 +1366,7 @@ SpriteRenderer:
   m_Size: {x: 16, y: 16}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &809794590
